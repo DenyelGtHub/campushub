@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CampusConnect | Student Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar">
+  <div class="brand">
+    <div class="brand-icon">C</div>
+    <div>
+      <h2>CampusConnect</h2>
+      <small>STUDENT PORTAL</small>
+    </div>
+  </div>
+
+  <div class="nav-label">MAIN MENU</div>
+  <button class="nav-item active" data-page="dashboard">▦ Dashboard</button>
+  <button class="nav-item" data-page="schedule">▤ Class Schedule</button>
+  <button class="nav-item" data-page="grades">▧ My Grades</button>
+  <button class="nav-item" data-page="announcements">◉ Announcements</button>
+
+  <div class="nav-label">ACCOUNT</div>
+  <button class="nav-item" data-page="profile">♙ My Profile</button>
+
+  <div class="sidebar-bottom">
+    <div class="help-card">
+      <strong>Need assistance?</strong>
+      <p>Contact your school's student support office.</p>
+    </div>
+  </div>
+</aside>
+
+<main class="main">
+
+<header class="topbar">
+  <div class="top-left">
+    <button class="icon-btn mobile-menu" id="menuBtn">☰</button>
+    <h3 id="topTitle">Dashboard</h3>
+  </div>
+
+  <div class="user-mini">
+    <div class="avatar" id="topAvatar">JD</div>
+    <div>
+      <strong id="topName">Juan Dela Cruz</strong>
+      <small>Student</small>
+    </div>
+  </div>
+</header>
+
+<div class="content">
+
+<!-- DASHBOARD -->
+<section class="page active" id="dashboard">
+
+  <div class="page-heading">
+    <div>
+      <h1>Dashboard</h1>
+      <p>Here's what's happening with your studies today.</p>
+    </div>
+    <span class="date-label" id="today"></span>
+  </div>
+
+  <div class="welcome">
+    <div>
+      <h2>Welcome back, <span id="welcomeName">Juan</span>! 👋</h2>
+      <p>Keep learning, keep growing. Your academic journey continues here.</p>
+    </div>
+    <div class="welcome-emoji">🎓</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card">
+      <div class="stat-icon purple">▧</div>
+      <h2>1.50</h2>
+      <p>General Weighted Average</p>
+      <div class="stat-note">★ Excellent performance</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon green">▤</div>
+      <h2>6</h2>
+      <p>Enrolled Subjects</p>
+      <div class="stat-note">Current semester</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon orange">◷</div>
+      <h2>96%</h2>
+      <p>Attendance Rate</p>
+      <div class="stat-note">Great attendance</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon blue">✓</div>
+      <h2>18</h2>
+      <p>Completed Activities</p>
+      <div class="stat-note">Keep it up!</div>
+    </div>
+  </div>
+
+  <div class="dashboard-grid">
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Today's Classes</h3>
+        <button class="link-btn" onclick="showPage('schedule')">View schedule →</button>
+      </div>
+
+      <div class="class-row">
+        <div class="class-color"></div>
+        <div class="class-info">
+          <strong>Web Development</strong>
+          <small>Prof. Maria Santos · Room 301</small>
+        </div>
+        <div class="class-time">8:00 AM</div>
+      </div>
+
+      <div class="class-row">
+        <div class="class-color green-line"></div>
+        <div class="class-info">
+          <strong>Database Management</strong>
+          <small>Prof. John Reyes · Room 204</small>
+        </div>
+        <div class="class-time">10:00 AM</div>
+      </div>
+
+      <div class="class-row">
+        <div class="class-color orange-line"></div>
+        <div class="class-info">
+          <strong>Computer Networking</strong>
+          <small>Prof. Anna Garcia · Lab 2</small>
+        </div>
+        <div class="class-time">1:00 PM</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Latest Announcements</h3>
+        <button class="link-btn" onclick="showPage('announcements')">See all →</button>
+      </div>
+
+      <div class="announcement">
+        <strong>📢 Enrollment Reminder</strong>
+        <p>Check your enrollment status and complete pending requirements.</p>
+        <small>November 24, 2026</small>
+      </div>
+
+      <div class="announcement">
+        <strong>📚 Midterm Examination</strong>
+        <p>Review your examination schedule and prepare accordingly.</p>
+        <small>November 20, 2026</small>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CLASS SCHEDULE -->
+<section class="page" id="schedule">
+
+  <div class="page-heading">
+    <div>
+      <h1>Class Schedule</h1>
+      <p>Your weekly academic timetable.</p>
+    </div>
+    <span class="date-label">First Semester · 2026–2027</span>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h3>Weekly Timetable</h3>
+      <span class="date-label">Monday – Friday</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>TIME</th>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>8:00 AM</td>
+            <td>Web Dev</td>
+            <td>-</td>
+            <td>Web Dev</td>
+            <td>-</td>
+            <td>Web Dev</td>
+          </tr>
+          <tr>
+            <td>10:00 AM</td>
+            <td>-</td>
+            <td>Database</td>
+            <td>-</td>
+            <td>Database</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>1:00 PM</td>
+            <td>Networking</td>
+            <td>Programming</td>
+            <td>Networking</td>
+            <td>Programming</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>3:00 PM</td>
+            <td>Mathematics</td>
+            <td>-</td>
+            <td>Mathematics</td>
+            <td>-</td>
+            <td>PE</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- GRADES -->
+<section class="page" id="grades">
+
+  <div class="page-heading">
+    <div>
+      <h1>My Grades</h1>
+      <p>Track your academic performance.</p>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card">
+      <h2>1.50</h2>
+      <p>General Average</p>
+    </div>
+    <div class="stat-card">
+      <h2>6</h2>
+      <p>Graded Subjects</p>
+    </div>
+    <div class="stat-card">
+      <h2>6/6</h2>
+      <p>Completed Subjects</p>
+    </div>
+    <div class="stat-card">
+      <h2>Excellent</h2>
+      <p>Academic Standing</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h3>Subject Grade Overview</h3>
+      <span class="date-label">Sample data</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>SUBJECT</th>
+            <th>INSTRUCTOR</th>
+            <th>UNITS</th>
+            <th>GRADE</th>
+            <th>STATUS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Web Development</td>
+            <td>Maria Santos</td>
+            <td>3</td>
+            <td><span class="grade">1.25</span></td>
+            <td>Passed</td>
+          </tr>
+          <tr>
+            <td>Database Management</td>
+            <td>John Reyes</td>
+            <td>3</td>
+            <td><span class="grade">1.50</span></td>
+            <td>Passed</td>
+          </tr>
+          <tr>
+            <td>Computer Networking</td>
+            <td>Anna Garcia</td>
+            <td>3</td>
+            <td><span class="grade">1.50</span></td>
+            <td>Passed</td>
+          </tr>
+          <tr>
+            <td>Programming 2</td>
+            <td>Mark Cruz</td>
+            <td>3</td>
+            <td><span class="grade">1.75</span></td>
+            <td>Passed</td>
+          </tr>
+          <tr>
+            <td>Mathematics</td>
+            <td>Sarah Lim</td>
+            <td>3</td>
+            <td><span class="grade">2.00</span></td>
+            <td>Passed</td>
+          </tr>
+          <tr>
+            <td>Physical Education</td>
+            <td>Peter Tan</td>
+            <td>2</td>
+            <td><span class="grade">1.00</span></td>
+            <td>Passed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note">Note: These are demonstration grades.</p>
+  </div>
+</section>
+
+<!-- ANNOUNCEMENTS -->
+<section class="page" id="announcements">
+
+  <div class="page-heading">
+    <div>
+      <h1>Announcements</h1>
+      <p>Stay informed with the latest campus updates.</p>
+    </div>
+  </div>
+
+  <div class="card">
+
+    <div class="announcement">
+      <small>📌 ACADEMIC · NOVEMBER 24, 2026</small>
+      <strong>Enrollment Reminder for Second Semester</strong>
+      <p>Students are reminded to review their enrollment records and complete all pending requirements before the registration deadline.</p>
+    </div>
+
+    <div class="announcement">
+      <small>📚 EXAMINATION · NOVEMBER 20, 2026</small>
+      <strong>Midterm Examination Guidelines</strong>
+      <p>Please review the examination schedule and bring your valid student identification card.</p>
+    </div>
+
+    <div class="announcement">
+      <small>🎉 CAMPUS EVENT · NOVEMBER 18, 2026</small>
+      <strong>Upcoming Student Activities</strong>
+      <p>Join our upcoming campus activities and student organization events.</p>
+    </div>
+
+    <div class="announcement">
+      <small>💻 INFORMATION TECHNOLOGY · NOVEMBER 15, 2026</small>
+      <strong>Computer Laboratory Schedule</strong>
+      <p>Computer laboratories are available for supervised student activities during designated hours.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- STUDENT PROFILE -->
+<section class="page" id="profile">
+
+  <div class="page-heading">
+    <div>
+      <h1>My Profile</h1>
+      <p>View and update your student information.</p>
+    </div>
+  </div>
+
+  <div class="profile-grid">
+
+    <div class="card profile-main">
+      <div class="profile-avatar" id="profileAvatar">JD</div>
+      <h2 id="profileDisplayName">Juan Dela Cruz</h2>
+      <p>BS Information Technology</p>
+      <p>Student ID: 2026-0001</p>
+      <br>
+      <span class="grade">Active Student</span>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Personal Information</h3>
+      </div>
+
+      <div class="profile-details">
+
+        <div class="detail">
+          <label>Full Name</label>
+          <input id="nameInput" value="Juan Dela Cruz">
+        </div>
+
+        <div class="detail">
+          <label>Student ID</label>
+          <input value="2026-0001" disabled>
+        </div>
+
+        <div class="detail">
+          <label>Email Address</label>
+          <input id="emailInput" type="email" value="juan@student.edu">
+        </div>
+
+        <div class="detail">
+          <label>Contact Number</label>
+          <input id="phoneInput" value="09123456789">
+        </div>
+
+        <div class="detail">
+          <label>Course</label>
+          <input value="BS Information Technology" disabled>
+        </div>
+
+        <div class="detail">
+          <label>Year Level</label>
+          <input value="3rd Year" disabled>
+        </div>
+
+      </div>
+
+      <button class="primary-btn" id="saveProfile">Save Changes</button>
+      <p id="saveMessage"></p>
+      <p class="note">Changes are saved locally in this browser.</p>
+    </div>
+
+  </div>
+</section>
+
+</div>
+</main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
